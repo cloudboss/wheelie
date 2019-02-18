@@ -31,7 +31,7 @@ type ModuleInput struct {
 	Wait            bool                   `json:"wait"`
 }
 
-// ModuleInput is the output from the module to Ansible.
+// ModuleOutput is the output from the module to Ansible.
 type ModuleOutput struct {
 	Msg        string           `json:"msg,omitempty"`
 	Changed    bool             `json:"changed"`
