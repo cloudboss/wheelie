@@ -154,7 +154,8 @@ func (m *HelmModule) respondJSON() {
 	responseBytes, err = json.Marshal(m.Output)
 	if err != nil {
 		responseBytes, _ = json.Marshal(ModuleOutput{
-			Msg: fmt.Sprintf("unexpected output: %v", err),
+			Failed: true,
+			Msg:    fmt.Sprintf("unexpected output: %v", err),
 		})
 	}
 	fmt.Println(string(responseBytes))
